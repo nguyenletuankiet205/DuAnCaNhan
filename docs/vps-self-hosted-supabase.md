@@ -14,17 +14,17 @@ VPS Ubuntu
 Trỏ các bản ghi sau về IP VPS:
 
 ```text
-nguyenhuynhkhanh.com        A    YOUR_VPS_IP
-www.nguyenhuynhkhanh.com    A    YOUR_VPS_IP
-api.nguyenhuynhkhanh.com    A    YOUR_VPS_IP
-studio.nguyenhuynhkhanh.com A    YOUR_VPS_IP
+nguyenletuankiet.online        A    YOUR_VPS_IP
+www.nguyenletuankiet.online    A    YOUR_VPS_IP
+api.nguyenletuankiet.online    A    YOUR_VPS_IP
+studio.nguyenletuankiet.online A    YOUR_VPS_IP
 ```
 
 Bạn có thể đổi domain theo thực tế, nhưng cần giữ 3 vai trò:
 
-- Domain website: `nguyenhuynhkhanh.com` cho app Next.js public và admin.
-- Domain API Supabase: `api.nguyenhuynhkhanh.com` cho Auth, REST, Storage.
-- Domain Studio: `studio.nguyenhuynhkhanh.com` cho giao diện quản trị Supabase, phải có Basic Auth.
+- Domain website: `nguyenletuankiet.online` cho app Next.js public và admin.
+- Domain API Supabase: `api.nguyenletuankiet.online` cho Auth, REST, Storage.
+- Domain Studio: `studio.nguyenletuankiet.online` cho giao diện quản trị Supabase, phải có Basic Auth.
 
 ## 2. Cài Docker và Caddy trên VPS
 
@@ -104,8 +104,8 @@ sudo systemctl reload caddy
 Kiểm tra:
 
 ```bash
-curl -I https://api.nguyenhuynhkhanh.com
-curl -I https://nguyenhuynhkhanh.com
+curl -I https://api.nguyenletuankiet.online
+curl -I https://nguyenletuankiet.online
 ```
 
 ## 5. Deploy app MIDIGI
@@ -131,9 +131,9 @@ nano .env.production
 Các dòng quan trọng:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://nguyenhuynhkhanh.com
+NEXT_PUBLIC_SITE_URL=https://nguyenletuankiet.online
 NEXT_PUBLIC_ENABLE_SUPABASE=true
-NEXT_PUBLIC_SUPABASE_URL=https://api.nguyenhuynhkhanh.com
+NEXT_PUBLIC_SUPABASE_URL=https://api.nguyenletuankiet.online
 NEXT_PUBLIC_SUPABASE_ANON_KEY=ANON_KEY_TU_SUPABASE_SELF_HOST
 SUPABASE_SERVICE_ROLE_KEY=SERVICE_ROLE_KEY_TU_SUPABASE_SELF_HOST
 SUPABASE_JWT_SECRET=JWT_SECRET_TU_SUPABASE_SELF_HOST
@@ -163,13 +163,13 @@ Sau khi `.env.production` có đủ Supabase URL và service role key:
 
 ```bash
 cp .env.production .env.local
-npm run admin:create -- --email=admin@nguyenhuynhkhanh.com --password='MAT_KHAU_ADMIN_MANH' --name='Quản trị viên MIDIGI'
+npm run admin:create -- --email=admin@nguyenletuankiet.online --password='MAT_KHAU_ADMIN_MANH' --name='Quản trị viên MIDIGI'
 ```
 
 Đăng nhập tại:
 
 ```text
-https://nguyenhuynhkhanh.com/dang-nhap
+https://nguyenletuankiet.online/dang-nhap
 ```
 
 ## 8. Vận hành và backup

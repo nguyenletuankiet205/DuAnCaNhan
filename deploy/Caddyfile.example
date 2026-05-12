@@ -1,8 +1,8 @@
 {
-  email admin@nguyenhuynhkhanh.com
+  email admin@nguyenletuankiet.online
 }
 
-nguyenhuynhkhanh.com, www.nguyenhuynhkhanh.com {
+nguyenletuankiet.online, www.nguyenletuankiet.online {
   encode zstd gzip
 
   header {
@@ -14,7 +14,7 @@ nguyenhuynhkhanh.com, www.nguyenhuynhkhanh.com {
   reverse_proxy 127.0.0.1:3000
 }
 
-api.nguyenhuynhkhanh.com {
+api.nguyenletuankiet.online {
   encode zstd gzip
 
   header {
@@ -25,7 +25,7 @@ api.nguyenhuynhkhanh.com {
   reverse_proxy 127.0.0.1:8000
 }
 
-studio.nguyenhuynhkhanh.com {
+studio.nguyenletuankiet.online {
   encode zstd gzip
 
   basicauth {
