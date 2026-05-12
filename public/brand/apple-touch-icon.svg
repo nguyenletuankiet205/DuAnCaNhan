@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="MIDIGI">
+  <rect width="180" height="180" rx="38" fill="#020617"/>
+  <path d="M39 120V60h19l32 39 32-39h19v60h-19V88l-25 32H83L58 88v32H39Z" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="39" x2="144" y1="60" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset=".55" stop-color="#1E40AF"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

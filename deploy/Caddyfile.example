@@ -1,0 +1,36 @@
+{
+  email admin@nguyenhuynhkhanh.com
+}
+
+nguyenhuynhkhanh.com, www.nguyenhuynhkhanh.com {
+  encode zstd gzip
+
+  header {
+    X-Content-Type-Options nosniff
+    X-Frame-Options DENY
+    Referrer-Policy strict-origin-when-cross-origin
+  }
+
+  reverse_proxy 127.0.0.1:3000
+}
+
+api.nguyenhuynhkhanh.com {
+  encode zstd gzip
+
+  header {
+    X-Content-Type-Options nosniff
+    Referrer-Policy strict-origin-when-cross-origin
+  }
+
+  reverse_proxy 127.0.0.1:8000
+}
+
+studio.nguyenhuynhkhanh.com {
+  encode zstd gzip
+
+  basicauth {
+    admin REPLACE_WITH_CADDY_HASHED_PASSWORD
+  }
+
+  reverse_proxy 127.0.0.1:8000
+}

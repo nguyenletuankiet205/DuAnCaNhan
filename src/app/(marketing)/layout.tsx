@@ -1,0 +1,12 @@
+import { MarketingFooter } from "@/sections/shared/marketing-footer";
+import { MarketingHeader } from "@/sections/shared/marketing-header";
+
+export default function MarketingLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <MarketingHeader />
+      {children}
+      <MarketingFooter />
+    </>
+  );
+}
