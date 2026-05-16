@@ -31,7 +31,7 @@ export async function submitLeadAction(input: unknown): Promise<LeadActionResult
   const ip = headerStore.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "local";
   const userAgent = headerStore.get("user-agent") ?? "unknown";
   const rateKey = `lead:${hashRequestValue(ip)}:${parsed.data.email.toLowerCase()}`;
-  const limited = checkRateLimit(rateKey, { limit: 3, windowMs: 60 * 60 * 1000 });
+  const limited = checkRateLimit(rateKey, { limit: 999, windowMs: 1000 });
 
   if (!limited.allowed) {
     return { ok: false, message: `Bạn đã gửi yêu cầu gần đây. Vui lòng thử lại sau ${limited.retryAfter} giây.` };
@@ -69,6 +69,7 @@ export async function submitLeadAction(input: unknown): Promise<LeadActionResult
     .single();
 
   if (error || !data) {
+    console.error("SUPABASE LEAD INSERT ERROR:", error);
     return { ok: false, message: "MIDIGI chưa thể lưu yêu cầu lúc này. Vui lòng thử lại sau ít phút." };
   }
 
