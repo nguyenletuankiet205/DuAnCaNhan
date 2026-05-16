@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  output: "standalone",
   typedRoutes: true,
   images: {
     remotePatterns: [
@@ -41,8 +40,7 @@ const nextConfig = {
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              "object-src 'none'",
-              "upgrade-insecure-requests"
+              "object-src 'none'"
             ].join("; ")
           }
         ]
