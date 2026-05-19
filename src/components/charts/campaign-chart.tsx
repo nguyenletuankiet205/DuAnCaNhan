@@ -7,8 +7,8 @@ import type { CampaignMetric } from "@/types/domain";
 export default function CampaignChart({ data }: { data: CampaignMetric[] }) {
   return (
     <div className="h-80 w-full">
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data}>
+     <ResponsiveContainer width="100%" height={300}>
+   <BarChart data={data}>
           <CartesianGrid stroke="#1E293B" strokeDasharray="3 3" />
           <XAxis dataKey="channel" stroke="#94A3B8" tick={{ fill: "#94A3B8", fontSize: 12 }} />
           <YAxis stroke="#94A3B8" tick={{ fill: "#94A3B8", fontSize: 12 }} />

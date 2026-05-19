@@ -37,7 +37,7 @@ export default async function DashboardBlogPage() {
             {posts.map((post) => (
               <TableRow key={post.id}>
                 <TableCell><p className="font-semibold text-white">{post.title}</p><p className="mt-1 text-xs text-muted-foreground">/{post.slug}</p></TableCell>
-                <TableCell><Badge variant={post.status === "published" ? "success" : post.status === "archived" ? "outline" : "warning"}>{blogStatusLabels[post.status]}</Badge></TableCell>
+                <TableCell><Badge variant={post.status === "published" ? "success" : post.status === "archived" ? "outline" : "warning"}>{blogStatusLabels[post.status as keyof typeof blogStatusLabels]}</Badge></TableCell>
                 <TableCell>{formatDateVi(post.updated_at)}</TableCell>
                 <TableCell>
                   <div className="flex flex-wrap items-center gap-3">
