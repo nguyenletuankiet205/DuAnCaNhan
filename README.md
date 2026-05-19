@@ -32,7 +32,8 @@ https://nguyenletuankiet.online
 
 ## Screenshots
 
-(Add screenshots here)
+<img width="1918" height="982" alt="image" src="https://github.com/user-attachments/assets/a9bae17d-98b9-4613-8979-8bfcf04f54be" />
+
 
 ## Installation
 
@@ -41,11 +42,17 @@ git clone https://github.com/nguyenletuankiet205/DuAnCaNhan.git
 cd DuAnCaNhan
 npm install
 npm run dev
-Deployment
-Azure VPS
-PM2 process manager
-Nginx reverse proxy
-Cloudflare DNS & SSL
-Author
+## Deployment
+
+* Azure VPS hosting
+* PM2 process manager
+* Nginx reverse proxy
+* Cloudflare DNS & SSL
+* Supabase PostgreSQL database
+
+## Author
 
 Kiệt Nguyễn
+
+* GitHub: https://github.com/nguyenletuankiet205
+* Website: https://nguyenletuankiet.online
