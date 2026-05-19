@@ -42,17 +42,22 @@ git clone https://github.com/nguyenletuankiet205/DuAnCaNhan.git
 cd DuAnCaNhan
 npm install
 npm run dev
+## Installation
+
+
+```
+
 ## Deployment
 
-* Azure VPS hosting
-* PM2 process manager
-* Nginx reverse proxy
-* Cloudflare DNS & SSL
-* Supabase PostgreSQL database
+- Azure VPS hosting
+- PM2 process manager
+- Nginx reverse proxy
+- Cloudflare DNS & SSL
+- Supabase PostgreSQL database
 
 ## Author
 
 Kiệt Nguyễn
 
-* GitHub: https://github.com/nguyenletuankiet205
-* Website: https://nguyenletuankiet.online
+- GitHub: https://github.com/nguyenletuankiet205
+- Website: https://nguyenletuankiet.online
