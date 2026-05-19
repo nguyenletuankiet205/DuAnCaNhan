@@ -42,7 +42,6 @@ git clone https://github.com/nguyenletuankiet205/DuAnCaNhan.git
 cd DuAnCaNhan
 npm install
 npm run dev
-## Installation
 
 
 ```
